@@ -19,5 +19,4 @@ To do that we need to generate an chess image to make calibration by store the o
 ![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/camera_cal/calibration1.jpg)
 
 Object points are made by multiply columns and row image with matrix of 3x3 with data type of 32, we apply this because we want to make a list of (x, y, z) to coordinates for each combination, while x, y values are set and  z values will set to be zero since we working through 2D images, after that, the objects point are mapped using OpenCV module cv2.drawChessboardCorners. It should look like this after applying OpenCV.
-
-
+[images]
