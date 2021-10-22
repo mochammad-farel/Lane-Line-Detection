@@ -20,3 +20,14 @@ To do that we need to generate an chess image to make calibration by store the o
 
 Object points are made by multiply columns and row image with matrix of 3x3 with data type of 32, we apply this because we want to make a list of (x, y, z) to coordinates for each combination, while x, y values are set and  z values will set to be zero since we working through 2D images, after that, the objects point are mapped using OpenCV module cv2.drawChessboardCorners. It should look like this after applying OpenCV.
 [images]
+
+## Gradient and Color Thresholding
+for the gradients are using sobel, magnitude and direction gradient, for sobel gradients are used with two axis x and y, this method would likely applied in canny edge detection. This is how it works, the image are converted into grayscale using OpenCV library, after that, setting up the sobel gradient for x and y  axis and calculate the gradients by multiply it to 255(because image have an RGB color) and divide it with the maximum of the gradient.
+
+applying the magnitude gradient into image, the process are likely same as we apply the sobel gradient in canny edge, the difference is in the gradient calculation, the purpose of applying gradients magnitude is to measure how strong the change in image intensity. and the last one direction gradient is used to filter the direction of gradient.
+
+For color thresholding we choose Hue Saturation Lightness or HSL color space to retain information about the lane lines in a picture and Red channel filters is used for creating binary lane line images.
+
+All of that are combined together in a pipeline, which resulting this
+
+[images]
