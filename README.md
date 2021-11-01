@@ -31,3 +31,29 @@ For color thresholding, choose Hue Saturation Lightness or HSL color space to re
 All of that are combined together in a pipeline, which resulting this
 
 ![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/combined_filters.png)
+
+## Perspective Transform
+Perspective transform are created to remove extra information in the images and focusing on the lines in the image. To do that, we have to generate linear matrix transform by using Opencv module which is getsPerpectiveTransform and warpPerspective. apply it on an image which resulting this polygon line on the images.
+![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/perspective_transform.png)
+
+After the linear matrix are formed, now we had to look at histogram distribution to checking the quality of the transformed image
+![github_image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/lane_histogram.png)
+
+## Lane Line Search Optimization
+For lane line search optimization, we could create:
+- search window on the bottom of the image
+- split the window into two halves which is left halves and right halves
+- locate the pixel column with the highest value
+- make a drawable box in the area using margin variable
+- identifying value for non-zero pixels in the drawable box
+- fitting quadratic equation to all non-zero pixels value
+After create those six steps. resulting  this
+![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/01_window_search.png)
+
+## Make Lane Overlay
+Now in this section, we could generate quadratic equation to generate polynomial output. After that we could use cv2.fillpoly to filling the polynomial output and cv2.warpPerspective to unwarp the images. The result is this.
+![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/lane_polygon.png)
+
+## Result
+After overlay are created, now we implement it on the dashcam footage
+![Demo](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/videos/chicago_lanelines.mp4)
