@@ -26,7 +26,7 @@ for the gradients are using sobel, magnitude and direction gradient, for sobel g
 
 applying the magnitude gradient into image, the process are likely same as we apply the sobel gradient in canny edge, the difference is in the gradient calculation, the purpose of applying gradients magnitude is to measure how strong the change in image intensity. and the last one direction gradient is used to filter the direction of gradient.
 
-For color thresholding we choose Hue Saturation Lightness or HSL color space to retain information about the lane lines in a picture and Red channel filters is used for creating binary lane line images.
+For color thresholding, choose Hue Saturation Lightness or HSL color space to retain information about the lane lines in a picture and Red channel filters is used for creating binary lane line images.
 
 All of that are combined together in a pipeline, which resulting this
 
