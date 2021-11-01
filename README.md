@@ -30,4 +30,4 @@ For color thresholding we choose Hue Saturation Lightness or HSL color space to 
 
 All of that are combined together in a pipeline, which resulting this
 
-[images]
+![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/combined_filters.png)
