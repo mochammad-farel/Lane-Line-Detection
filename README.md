@@ -56,4 +56,4 @@ Now in this section, we could generate quadratic equation to generate polynomial
 
 ## Result
 After overlay are created, now we implement it on the dashcam footage
-![caption](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/videos/chicago_lanelines.mp4 / GIF)
+![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/videos/Screenshot%202021-11-01%20203746.jpg)
