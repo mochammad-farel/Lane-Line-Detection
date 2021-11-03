@@ -19,7 +19,7 @@ To do that we need to generate an chess image to make calibration by store the o
 ![github image](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/camera_cal/calibration1.jpg)
 
 Object points are made by multiply columns and row image with matrix of 3x3 with data type of 32, we apply this because we want to make a list of (x, y, z) to coordinates for each combination, while x, y values are set and  z values will set to be zero since we working through 2D images, after that, the objects point are mapped using OpenCV module cv2.drawChessboardCorners. It should look like this after applying OpenCV.
-[images]
+![github images](https://github.com/mochammad-farel/Lane-Line-Detection/blob/main/saved_figures/chess_corners.png)
 
 ## Gradient and Color Thresholding
 for the gradients are using sobel, magnitude and direction gradient, for sobel gradients are used with two axis x and y, this method would likely applied in canny edge detection. This is how it works, the image are converted into grayscale using OpenCV library, after that, setting up the sobel gradient for x and y  axis and calculate the gradients by multiply it to 255(because image have an RGB color) and divide it with the maximum of the gradient.
